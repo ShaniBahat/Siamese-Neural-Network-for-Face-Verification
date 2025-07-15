@@ -11,7 +11,6 @@ The model follows a Siamese CNN structure with the architecture inspired by the 
  
 ![Siamese Architecture](./assets/architecture.png)
 
----
 
 ### Layer Structure
 
@@ -32,8 +31,6 @@ Regularization:
 - Optimizer: `Adam`
 - Loss: `Binary Cross Entropy`
 
----
-
 ## Training Setup
 
 - Validation Split: 20%
@@ -49,7 +46,6 @@ Regularization:
   - Epochs: `15`
   - Dropout: `0.5`
 
----
 
 ## Training Results
 
@@ -67,34 +63,31 @@ These are selected based on the network's confidence:
 **Probability**: 0.9999  
 > The model correctly identified the same individual.
 
-![True Positive](./assets/TP_example.png)
+<img src="./assets/TP_example.png" alt="True Positive" width="300"/>
 
----
 
 ### True Negative  
 **Persons**: Gordon Campbell & Pierre Boulanger  
 **Probability**: 8.573e-08  
 > Correctly classified as different individuals.
- 
-![True Negative](./assets/TN_example.png)
 
----
+<img src="./assets/TN_example.png" alt="True Negative" width="300"/>
+
 
 ### False Positive  
 **Persons**: Ismail Merchant & Joseph Deiss  
 **Probability**: 0.9997  
 > Misclassified due to facial similarities and unclear angles.
-  
-![False Positive](./assets/FP_example.png)
 
----
+<img src="./assets/FP_example.png" alt="False Positive" width="300"/>
+
 
 ### False Negative  
 **Person**: Bono  
 **Probability**: 3.01e-05  
 > Misclassified due to occlusions like hat and sunglasses.
- 
-![False Negative](./assets/FN_example.png)
+
+<img src="./assets/FN_example.png" alt="False Negative" width="300"/>
 
 ---
 
@@ -102,5 +95,3 @@ These are selected based on the network's confidence:
 
 - Implemented using **PyTorch Lightning**
 - Supports **early stopping** based on validation accuracy
-
----
